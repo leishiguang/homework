@@ -1,3 +1,5 @@
+package demo.homework;
+
 public class Test18 {
     //(封装)已知一个类 Student 代码如下：
     //class Student{
@@ -11,14 +13,14 @@ public class Test18 {
     //	1、把Student 的属性都作为私有，并提供get/set 方法以及适当的构造方法。
     //	2、为Student 类添加一个getPostAddress 方法，要求返回Student 对象的地址和邮编。
     public static void main(String[] args) {
-        Student student = new Student("张三",18,"江西赣州","1000000","123456");
+        Student student = new Student("张三", 18, "江西赣州", "1000000", "123456");
         student.getPostAddress();
     }
 
 
 }
 
-class  Student{
+class Student {
     private String name;
     private int age;
     private String address;
@@ -40,41 +42,42 @@ class  Student{
         return name;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public String getZipCode() {
-        return zipCode;
-    }
-
-    public String getMobile() {
-        return mobile;
-    }
-
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getAge() {
+        return age;
     }
 
     public void setAge(int age) {
         this.age = age;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getZipCode() {
+        return zipCode;
     }
 
     public void setZipCode(String zipCode) {
         this.zipCode = zipCode;
     }
 
+    public String getMobile() {
+        return mobile;
+    }
+
     public void setMobile(String mobile) {
         this.mobile = mobile;
     }
+
     public void getPostAddress() {
         System.out.println(this.getName() + "的地址是：" + this.getAddress());
         System.out.println(this.getName() + "的邮编是：" + this.getZipCode());

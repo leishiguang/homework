@@ -1,3 +1,5 @@
+package demo.homework;
+
 public class Test17 {
     //定义丈夫类 Husband 和妻子类 Wife，
     //丈夫类的属性包括：身份证号，姓名，出生日期，妻子。
@@ -8,8 +10,8 @@ public class Test17 {
     //或者能够输出这个“妻子对象”的丈夫的名字。要求能够画出程序执行过程的内存图。
     //并且要求在程序中演示出空指针异常的效果。
     public static void main(String[] args) {
-        Husband husband = new Husband(123, "张三","2021.1.1 ");
-        Wife wife = new Wife(124,"李四","2021.1.1");
+        Husband husband = new Husband(123, "张三", "2021.1.1 ");
+        Wife wife = new Wife(124, "李四", "2021.1.1");
         husband.wife = wife;
         wife.husband = husband;
         System.out.println(husband.name + "的妻子是" + wife.name);
@@ -18,7 +20,7 @@ public class Test17 {
 }
 
 
-class Husband{
+class Husband {
     int id;
     String name;
     String birth;
@@ -43,9 +45,7 @@ class Husband{
 }
 
 
-
-
-class Wife{
+class Wife {
     int id;
     String name;
     String birth;

@@ -1,4 +1,6 @@
-public class Tesr16 {
+package demo.homework;
+
+public class Test16 {
     //写一个名为Account的类模拟账户。
     //该类的属性和方法如下所示。
     //该类包括的属性：账户id，余额balance，年利率annualInterestRate；
@@ -13,17 +15,17 @@ public class Tesr16 {
     //成功取出：960
     //余额不足，取钱失败
     public static void main(String[] args) {
-        Account account = new Account(1000,2000,0.0123);
-        Customer customer = new Customer("Jane Smith",account);
+        Account account = new Account(1000, 2000, 0.0123);
+        Customer customer = new Customer("Jane Smith", account);
         customer.getAccount().deposit(100);
         customer.getAccount().withdraw(960);
         customer.getAccount().withdraw(2000);
     }
 
 
-
 }
-class Account{
+
+class Account {
     private int id;
     private double balance;
     private double annualInterestRate;
@@ -41,42 +43,44 @@ class Account{
         return id;
     }
 
-    public double getBalance() {
-        return balance;
-    }
-
-    public double getAnnualInterestRate() {
-        return annualInterestRate;
-    }
-
     public void setId(int id) {
         this.id = id;
+    }
+
+    public double getBalance() {
+        return balance;
     }
 
     public void setBalance(double balance) {
         this.balance = balance;
     }
 
+    public double getAnnualInterestRate() {
+        return annualInterestRate;
+    }
+
     public void setAnnualInterestRate(double annualInterestRate) {
         this.annualInterestRate = annualInterestRate;
     }
-    public void withdraw(double money){
-         if (money > this.getBalance()){
-             System.out.println("余额不足，取钱失败");
-             return;
-         }
-         this.setBalance(this.getBalance() - money);
+
+    public void withdraw(double money) {
+        if (money > this.getBalance()) {
+            System.out.println("余额不足，取钱失败");
+            return;
+        }
+        this.setBalance(this.getBalance() - money);
         System.out.println("成功取出：" + money);
 
     }
-    public void deposit(double money){
+
+    public void deposit(double money) {
         this.setBalance(this.getBalance() + money);
         System.out.println("成功存入：" + money);
 
     }
 }
 
-class Customer{
+class Customer {
     private String name;
     private Account account;
 
@@ -92,12 +96,12 @@ class Customer{
         return name;
     }
 
-    public Account getAccount() {
-        return account;
-    }
-
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Account getAccount() {
+        return account;
     }
 
     public void setAccount(Account account) {

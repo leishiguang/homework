@@ -1,3 +1,5 @@
+package demo.homework;
+
 import java.util.Scanner;
 
 public class Test09 {
@@ -14,15 +16,15 @@ public class Test09 {
         System.out.println("请输入你的成绩：");
         Scanner scanner = new Scanner(System.in);
         double score = scanner.nextDouble();
-        if (score < 0 || score > 100){
+        if (score < 0 || score > 100) {
             System.out.println("你输入的成绩有误，请重新输入");
-        }else if (score == 100){
+        } else if (score == 100) {
             System.out.println("你可以得到一辆BMW");
-        }else if (score > 80){
+        } else if (score > 80) {
             System.out.println("你可以得到一台iphone xs max");
-        }else if (score >= 60){
+        } else if (score >= 60) {
             System.out.println("你可以得到一个iPad");
-        }else {
+        } else {
             System.out.println("没有奖励");
         }
 
